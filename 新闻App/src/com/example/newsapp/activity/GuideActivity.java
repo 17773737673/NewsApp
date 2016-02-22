@@ -9,6 +9,8 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.support.v4.view.ViewPager.OnPageChangeListener;
+import android.support.v4.view.ViewPropertyAnimatorListenerAdapter;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -47,6 +49,7 @@ public class GuideActivity extends Activity {
 		// 初始化数据
 		initPagerView();
 		guide_Pager.setAdapter(new GuideAdapter());
+		guide_Pager.setOnPageChangeListener(new GuideMoveListener());
 	}
 
 	// 初始化view方法
@@ -103,5 +106,31 @@ public class GuideActivity extends Activity {
 		public void destroyItem(ViewGroup container, int position, Object object) {
 			container.removeView((View) object);
 		}
+	}
+	//pager滑动监听
+	class GuideMoveListener implements OnPageChangeListener{
+		
+		//滑动状态发生变化时
+		@Override
+		public void onPageScrollStateChanged(int arg0) {
+			
+		}
+		//滑动事件
+		@Override
+		public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+//			 System.out.println("当前位置:" + position + ";百分比:" + positionOffset
+//						 + ";移动距离:" + positionOffsetPixels);
+		}
+
+		//某个页面被选中时
+		@Override
+		public void onPageSelected(int arg0) {
+			if(arg0==images.length-1){
+				guide_Button.setVisibility(View.VISIBLE);
+			}else{
+				guide_Button.setVisibility(View.INVISIBLE);
+			}
+		}
+		
 	}
 }

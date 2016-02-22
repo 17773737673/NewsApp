@@ -73,7 +73,6 @@ public class SplashActivity extends ActionBarActivity {
 			@Override
 			public void onAnimationStart(Animation animation) {
 				// TODO Auto-generated method stub
-				
 			}
 			
 			@Override
