@@ -23,6 +23,7 @@
             </intent-filter>
         </activity>
         <activity android:name="com.example.newsapp.activity.GuideActivity"></activity>
+    	<activity android:name="com.example.newsapp.activity.HomeActivity"></activity>
     </application>
 
 </manifest>

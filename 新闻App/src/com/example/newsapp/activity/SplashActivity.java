@@ -2,6 +2,7 @@ package com.example.newsapp.activity;
 
 
 import com.example.newsapp.R;
+import com.example.newsapp.utils.PrefUtil;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -25,14 +26,15 @@ import android.widget.RelativeLayout;
 public class SplashActivity extends ActionBarActivity {
 
 	private RelativeLayout rlSplash;
-
+	private final String prefName="once_guide";
+	private boolean booleanPref;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_splash);
 		
 		rlSplash = (RelativeLayout) findViewById(R.id.splash_rl);
-		
+		booleanPref = PrefUtil.getBooleanPref(getApplicationContext(), prefName);
 		//init
 		starLayoutAnim();
 	}
@@ -86,9 +88,25 @@ public class SplashActivity extends ActionBarActivity {
 				
 				//startActivityIntent
 				//SystemClock.sleep(1000);
-				startActivity(new Intent(SplashActivity.this,GuideActivity.class));
-				finish();
+				PrefUtil.setBooleanPref(getApplicationContext(), prefName, true);
+				if(booleanPref){
+					jumpHome();
+				}else{
+					jumpGuide();
+				}
 			}
 		});
+	}
+	
+	//跳转主界面
+	private void jumpHome(){
+		startActivity(new Intent(SplashActivity.this,HomeActivity.class));
+		finish();
+	}
+	
+	//跳转新手引导页
+	private void jumpGuide(){
+		startActivity(new Intent(SplashActivity.this,GuideActivity.class));
+		finish();
 	}
 }
