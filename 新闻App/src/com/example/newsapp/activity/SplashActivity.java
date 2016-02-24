@@ -52,19 +52,21 @@ public class SplashActivity extends ActionBarActivity {
 		scale.setDuration(1000);
 		scale.setFillAfter(true);
 				
-		//渐变
-		AlphaAnimation alpha = new AlphaAnimation(0, 1);
-		alpha.setDuration(1000);
-		alpha.setFillAfter(true);
 		//旋转
 		RotateAnimation rotate = new RotateAnimation(0, 360, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
 		rotate.setDuration(1000);
 		rotate.setFillAfter(true);
 		
+		//渐变
+		AlphaAnimation alpha = new AlphaAnimation(0, 1);
+		alpha.setDuration(2000);
+		alpha.setFillAfter(true);
+		
 		//添加
 		set.addAnimation(scale);
-		set.addAnimation(alpha);
 		set.addAnimation(rotate);
+		set.addAnimation(alpha);
+		
 		//开始
 		rlSplash.startAnimation(set);
 		
