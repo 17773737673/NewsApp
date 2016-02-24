@@ -1,11 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
 
-    <TextView
-        android:layout_width="wrap_content"
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_home_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <RadioGroup
+        android:id="@+id/rg_home_group"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="我是内容栏" />
+        android:background="@android:color/darker_gray"
+        android:orientation="horizontal" >
 
-</FrameLayout>
+        <RadioButton
+            android:id="@+id/rb_home_btn1"
+            style="@style/BottomTabStyle"
+            android:drawableTop="@drawable/home_radio_button_style"
+            android:gravity="center_horizontal"
+            android:text="首页" />
+
+        <RadioButton
+            android:id="@+id/rb_home_btn2"
+            style="@style/BottomTabStyle"
+            android:drawableTop="@drawable/home_radio_button_style2"
+            android:text="新闻中心" />
+
+        <RadioButton
+            android:id="@+id/rb_home_btn3"
+            style="@style/BottomTabStyle"
+            android:drawableTop="@drawable/home_radio_button_style3"
+            android:text="智慧服务" />
+
+        <RadioButton
+            android:id="@+id/rb_home_btn4"
+            style="@style/BottomTabStyle"
+            android:drawableTop="@drawable/home_radio_button_style4"
+            android:text="政务" />
+
+        <RadioButton
+            android:id="@+id/rb_home_btn5"
+            style="@style/BottomTabStyle"
+            android:drawableTop="@drawable/home_radio_button_style5"
+            android:text="设置" />
+    </RadioGroup>
+
+</LinearLayout>

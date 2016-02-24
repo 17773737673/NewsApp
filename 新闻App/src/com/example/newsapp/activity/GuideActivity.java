@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.example.newsapp.R;
+import com.example.newsapp.base.BaseViewPagerAdapter;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -65,7 +66,7 @@ public class GuideActivity extends Activity {
 		guide_red_view = findViewById(R.id.guide_view);
 		// 初始化数据
 		initPagerView();
-		guide_Pager.setAdapter(new GuideAdapter());
+		guide_Pager.setAdapter(new BaseViewPagerAdapter<ImageView>(imageList));
 		guide_Pager.setOnPageChangeListener(new GuideMoveListener());
 	}
 
@@ -119,36 +120,36 @@ public class GuideActivity extends Activity {
 		});
 	}   
 
-	/**
-	 * 
-	 * @author AutismPerson pager适配器
-	 * 
-	 */
-	class GuideAdapter extends PagerAdapter {
-
-		@Override
-		public int getCount() {
-
-			return images.length;
-		}
-
-		@Override
-		public boolean isViewFromObject(View arg0, Object arg1) {
-			return arg0 == arg1;
-		}
-
-		@Override
-		public Object instantiateItem(ViewGroup container, int position) {
-			container.addView(imageList.get(position)); // 图片添加到pager,
-			return imageList.get(position); // 返回
-		}
-
-		// 销毁时调用
-		@Override
-		public void destroyItem(ViewGroup container, int position, Object object) {
-			container.removeView((View) object);
-		}
-	}
+//	/**
+//	 * 
+//	 * @author AutismPerson pager适配器
+//	 * 
+//	 */
+//	class GuideAdapter extends PagerAdapter {
+//
+//		@Override
+//		public int getCount() {
+//
+//			return images.length;
+//		}
+//
+//		@Override
+//		public boolean isViewFromObject(View arg0, Object arg1) {
+//			return arg0 == arg1;
+//		}
+//
+//		@Override
+//		public Object instantiateItem(ViewGroup container, int position) {
+//			container.addView(imageList.get(position)); // 图片添加到pager,
+//			return imageList.get(position); // 返回
+//		}
+//
+//		// 销毁时调用
+//		@Override
+//		public void destroyItem(ViewGroup container, int position, Object object) {
+//			container.removeView((View) object);
+//		}
+//	}
 
 	// pager滑动监听
 	class GuideMoveListener implements OnPageChangeListener {
