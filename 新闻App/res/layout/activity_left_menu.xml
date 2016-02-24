@@ -2,13 +2,10 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/fragment_left_view"
- >
-
-    <TextView 
+>    
+  <TextView 
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="我是侧边栏"
+        android:text="我是侧边栏1111"
         />
-
 </FrameLayout>
