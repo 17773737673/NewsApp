@@ -1,6 +1,7 @@
 package com.example.newsapp.fragment;
 
 import com.example.newsapp.R;
+import com.example.newsapp.base.BaseFragment;
 
 import android.view.View;
 

@@ -31,6 +31,7 @@ public class HomeActivity extends SlidingFragmentActivity {
 		setContentView(R.layout.activity_home);
 
 		setBehindContentView(R.layout.activity_home_menu);
+		
 		SlidingMenu menu = getSlidingMenu();
 		menu.setBehindOffset((int) (getScreenWidth() * SCREEN_WIDTH));
 		menu.setBehindScrollScale(0);// 设置缩放度

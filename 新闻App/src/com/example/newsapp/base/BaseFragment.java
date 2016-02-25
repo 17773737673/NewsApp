@@ -1,4 +1,4 @@
-package com.example.newsapp.fragment;
+package com.example.newsapp.base;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -43,7 +43,7 @@ public abstract class BaseFragment extends Fragment {
 		super.onActivityCreated(savedInstanceState);
 		initData();
 	}
-
+	
 	//子类必须要实现初始化布局的方法
 	public abstract View initViews();
 	
