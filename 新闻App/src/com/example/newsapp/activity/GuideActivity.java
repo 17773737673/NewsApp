@@ -120,36 +120,6 @@ public class GuideActivity extends Activity {
 		});
 	}   
 
-//	/**
-//	 * 
-//	 * @author AutismPerson pager适配器
-//	 * 
-//	 */
-//	class GuideAdapter extends PagerAdapter {
-//
-//		@Override
-//		public int getCount() {
-//
-//			return images.length;
-//		}
-//
-//		@Override
-//		public boolean isViewFromObject(View arg0, Object arg1) {
-//			return arg0 == arg1;
-//		}
-//
-//		@Override
-//		public Object instantiateItem(ViewGroup container, int position) {
-//			container.addView(imageList.get(position)); // 图片添加到pager,
-//			return imageList.get(position); // 返回
-//		}
-//
-//		// 销毁时调用
-//		@Override
-//		public void destroyItem(ViewGroup container, int position, Object object) {
-//			container.removeView((View) object);
-//		}
-//	}
 
 	// pager滑动监听
 	class GuideMoveListener implements OnPageChangeListener {

@@ -16,7 +16,7 @@
             android:gravity="center"
             android:text="新闻中心"
             android:textColor="@color/radio_button_color"
-            android:textSize="20sp" />
+            android:textSize="24sp" />
         
         
         <ImageButton 
@@ -28,6 +28,7 @@
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
             android:layout_marginLeft="5dp"
+            android:padding="5dp"
             />
     </RelativeLayout>
 

@@ -3,9 +3,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 >    
-  <TextView 
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="我是侧边栏1111"
-        />
+
+  <ListView 
+      android:id="@+id/lv_left_menu"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:listSelector="@null"
+      android:layout_gravity="center"
+      android:divider="@android:color/transparent"
+      />
 </FrameLayout>

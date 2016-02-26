@@ -31,7 +31,7 @@ public class HomeActivity extends SlidingFragmentActivity {
 		setContentView(R.layout.activity_home);
 
 		setBehindContentView(R.layout.activity_home_menu);
-		
+
 		SlidingMenu menu = getSlidingMenu();
 		menu.setBehindOffset((int) (getScreenWidth() * SCREEN_WIDTH));
 		menu.setBehindScrollScale(0);// 设置缩放度
@@ -59,8 +59,21 @@ public class HomeActivity extends SlidingFragmentActivity {
 		transaction.replace(R.id.fragment_left_view, new LeftFragment(), FRAGMENT_LEFT_MENU);// 替换左边布局
 		transaction.replace(R.id.activity_home_view, new ContentFragment(), FRAGMENT_CONTENT);// 替换内容布局
 
-		//可以通过标签获取到类
-//		Fragment fragment = fm.findFragmentByTag(FRAGMENT_CONTENT);
+		// 可以通过标签获取到类
+		// Fragment fragment = fm.findFragmentByTag(FRAGMENT_CONTENT);
 		transaction.commit();// 提交事务
+	}
+
+	//方便别的类获取左边menu实例
+	public Fragment getLeftFrameLayout() {
+		FragmentManager fm = getSupportFragmentManager();
+		Fragment fragment = fm.findFragmentByTag(FRAGMENT_LEFT_MENU);
+		return fragment;
+	}
+	//方便别的类获取内容区
+	public Fragment getContentFrameLayout() {
+		FragmentManager fm = getSupportFragmentManager();
+		Fragment fragment = fm.findFragmentByTag(FRAGMENT_CONTENT);
+		return fragment;
 	}
 }
