@@ -27,7 +27,10 @@
         </activity>
         <activity android:name="com.example.newsapp.activity.GuideActivity" >
         </activity>
-        <activity android:name="com.example.newsapp.activity.HomeActivity" >
+        <activity
+            android:name="com.example.newsapp.activity.HomeActivity"
+            android:theme="@style/Theme.PageIndicatorDefaults" 
+            >
         </activity>
     </application>
 

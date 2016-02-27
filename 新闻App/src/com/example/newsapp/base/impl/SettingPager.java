@@ -25,5 +25,6 @@ public class SettingPager extends BasePager {
 		text.setGravity(Gravity.CENTER);
 		text.setTextSize(22);
 		mFrame.addView(text);
+		
 	}
 }

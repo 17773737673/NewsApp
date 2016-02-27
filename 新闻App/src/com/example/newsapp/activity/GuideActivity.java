@@ -23,7 +23,7 @@ import android.widget.RelativeLayout;
 
 /**
  * 
- * @author AutismPerson
+ * @author AutismPerson  
  *自定义view 动态添加三个小灰点
  *静态写入一个小红点
  *在视图树中,获取父类控件,获取父类控件中2个子类控件左边距相减,得到2到子控件

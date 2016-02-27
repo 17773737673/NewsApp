@@ -18,7 +18,7 @@ public class HomePager extends BasePager {
 	
 	@Override
 	public void initData() {
-		tvTitle.setText("智慧北京");
+		tvTitle.setText("首页");
 		setSlidingMenuIsShow(false);
 		iBtn.setVisibility(View.GONE);
 		TextView text = new TextView(activity);

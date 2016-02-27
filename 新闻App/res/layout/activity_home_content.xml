@@ -34,7 +34,7 @@
             android:id="@+id/rb_home_btn3"
             style="@style/BottomTabStyle"
             android:drawableTop="@drawable/home_radio_button_style3"
-            android:text="智慧服务" />
+            android:text="服务" />
 
         <RadioButton
             android:id="@+id/rb_home_btn4"
