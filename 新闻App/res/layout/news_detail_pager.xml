@@ -3,16 +3,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-    
 
-    <com.example.newsapp.view.TopNewsViewPager 
-        android:id="@+id/detail_iv_top"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        />
-    <ListView 
+    <com.example.newsapp.view.RefreshList
         android:id="@+id/detail_lv_new"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        />
+        android:layout_height="wrap_content" />
+
 </LinearLayout>

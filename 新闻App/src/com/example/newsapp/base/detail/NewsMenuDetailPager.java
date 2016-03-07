@@ -43,7 +43,7 @@ public class NewsMenuDetailPager extends BaseNewsMenuDetailPager {
 	public View initView() {
 		View view = View.inflate(mActivity, R.layout.pager_news_list, null);
 		mViewPager = (ViewPager) view.findViewById(R.id.vp_new_pager);
-		indicator = (TabPageIndicator)view.findViewById(R.id.indicator);
+		indicator = (TabPageIndicator)view.findViewById(R.id.indicators);
 		ImageButton ib =(ImageButton) view.findViewById(R.id.ib_detail);
 		
 		ib.setOnClickListener(new OnClickListener() {

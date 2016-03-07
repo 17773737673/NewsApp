@@ -31,7 +31,7 @@ public class TabNewsData {
 	 * @author AutismPerson 新闻集合
 	 *
 	 */
-	class TabNews{
+	public class TabNews{
 		public String id;
 		public String listimage;	//图片信息
 		public String pubdate;		//更新时间
@@ -43,7 +43,6 @@ public class TabNewsData {
 			return "TabNews [id=" + id + ", listimage=" + listimage + ", pubdate=" + pubdate + ", title=" + title
 					+ ", type=" + type + ", url=" + url + "]";
 		}
-		
 	}
 	
 	/**
